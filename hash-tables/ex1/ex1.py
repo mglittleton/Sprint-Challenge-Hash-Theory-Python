@@ -21,11 +21,7 @@ def get_indices_of_item_weights(weights, length, limit):
         if balance_index is None:
             hash_table_insert(ht, weights[i], i)
         # if there is a pair, return it in the correct format 
-        elif balance > weights[i]:
-            print ("balance",balance, "weight", weights[i])
-            return (balance_index, i)
         else:
-            print ("balance",balance, "weight", weights[i])
             return (i, balance_index)
     
     # return None if no pair is ever found
@@ -37,6 +33,3 @@ def print_answer(answer):
         print(str(answer[0]) + " " + str(answer[1]))
     else:
         print("None")
-
-
-print_answer(get_indices_of_item_weights([12, 6, 7, 14, 19, 3, 0, 25, 40], 9, 7))
